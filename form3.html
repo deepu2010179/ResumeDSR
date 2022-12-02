@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume Builder</title>
+    <link rel="icon" type="image/x-icon" href="favi1.png">
+    <script src="https://kit.fontawesome.com/c288d1a9df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda One">
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <a href="index.html"><img src="favi.png" width="220" height="50" class="front"></a>
+    <div class="container" id="res-form">
+        <p class="temp"><b>Enter Your Details</b></p>
+        <hr style="height:4px; border-width:0; color:rgb(3, 3, 116); background-color:rgb(3, 3, 116);">
+        <div class="container1">
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('personal')">PERSONAL</p>
+                <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+                <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+                <p class="tab-links" onclick="opentab('skillsets')">SKILLSETS</p>
+                <p class="tab-links" onclick="opentab('projects')">PROJECTS</p>
+                <p class="tab-links" onclick="opentab('certifications')">CERTIFICATIONS</p>
+                <p class="tab-links" onclick="opentab('additional')">ADDITIONAL</p>
+            </div>  
+            <div class="tab-contents active-tab" id="personal">
+                <p>PERSONAL INFO</p>
+                <div class="field mt-2">First Name:<input type="text" id="fn" class="form-control" placeholder="John" required="true"></div>
+                <div class="field mt-2">Middle Name:<input type="text" id="mn" class="form-control" placeholder="de" required></div>
+                <div class="field mt-2">Last Name:<input type="text" id="ln" class="form-control" placeholder="Willians" required></div>   
+                <div class="field mt-2">Title:<input type="text" id="tt" class="form-control" placeholder="Web Developer" required></div>
+                <div class="field mt-2">Address:<input type="text" id="ad" class="form-control" placeholder="Address" required></div>
+                <div class="field mt-2">Mobile No.:<input type="tel" id="mo" class="form-control" placeholder="Mobile No." required></div>
+                <div class="field mt-2">E-mail:<input type="email" id="em" class="form-control" placeholder="email" required></div>
+                <div class="field mt-2">Links:<input id="lk1" type="text" placeholder="Link"  class="form-control" required></div> 
+                <hr>
+            </div>
+            <div class="tab-contents" id="education">
+                <p>COLLEGE/ACADEMIC DETAILS</p>
+                <p id="bld">10th Details </p>
+                <div class="field mt-2">Institute Name:<input type="text" id="in" class="form-control e1" placeholder="Institute Name" required></div>
+                <div class="field mt-2">Location:<input type="text" id="lc" class="form-control e3" placeholder="Location" required></div>
+                <div class="field mt-2">Board:<input type="text" id="pr" class="form-control e4" placeholder="Program/Field of Study" required></div>
+                <div class="field mt-2">Marks Obtained:<input type="text" id="sc" class="form-control e5" placeholder="Scores" required></div>
+                <div class="field mt-2">Start Year:<input type="text" id="sm" class="form-control e6" placeholder="Start Month/Year" required></div>
+                <div class="field mt-2">Completion Year:<input type="text" id="gy" class="form-control e7" placeholder="Graduation Month/Year" required></div>
+                <hr>
+                <p id="bld">12th/Diploma Details </p>
+                <div class="field mt-2">Institute Name:<input type="text" id="in1" class="form-control e1" placeholder="Institute Name" required></div>
+                <div class="field mt-2">Location:<input type="text" id="lc1" class="form-control e3" placeholder="Location" required></div>
+                <div class="field mt-2">Board:<input type="text" id="pr1" class="form-control e4" placeholder="Program/Field of Study" required></div>
+                <div class="field mt-2">Marks Obtained:<input type="text" id="sc1" class="form-control e5" placeholder="Scores" required></div>
+                <div class="field mt-2">Start Year:<input type="text" id="sm1" class="form-control e6" placeholder="Start Month/Year" required></div>
+                <div class="field mt-2">Completion Year:<input type="text" id="gy1" class="form-control e7" placeholder="Graduation Month/Year" required></div>
+                <hr>
+                <p id="bld">Graduation Details </p>
+                <div class="field mt-2">Institute Name:<input type="text" id="in2" class="form-control e1" placeholder="Institute Name" required></div>
+                <div class="field mt-2">Location:<input type="text" id="lc2" class="form-control e3" placeholder="Location" required></div>
+                <div class="field mt-2">Course:<input type="text" id="pr2" class="form-control e4" placeholder="Program/Field of Study" required></div>
+                <div class="field mt-2">Branch:<input type="text" id="br2" class="form-control e4" placeholder="Program/Field of Study" required></div>
+                <div class="field mt-2">Marks Obtained:<input type="text" id="sc2" class="form-control e5" placeholder="Scores" required></div>
+                <div class="field mt-2">Start Year:<input type="text" id="sm2" class="form-control e6" placeholder="Start Month/Year" required></div>
+                <div class="field mt-2">Completion Year:<input type="text" id="gy2" class="form-control e7" placeholder="Graduation Month/Year" required></div>
+                <hr>
+                <p id="bld">Post-Graduation Details </p>
+                <div class="field mt-2">Institute Name:<input type="text" id="in3" class="form-control e1" placeholder="Institute Name" required></div>
+                <div class="field mt-2">Location:<input type="text" id="lc3" class="form-control e3" placeholder="Location" required></div>
+                <div class="field mt-2">Course:<input type="text" id="pr3" class="form-control e4" placeholder="Program/Field of Study" required></div>
+                <div class="field mt-2">Branch:<input type="text" id="br3" class="form-control e4" placeholder="Program/Field of Study" required></div>
+                <div class="field mt-2">Marks Obtained:<input type="text" id="sc3" class="form-control e5" placeholder="Scores" required></div>
+                <div class="field mt-2">Start Year:<input type="text" id="sm3" class="form-control e6" placeholder="Start Month/Year" required></div>
+                <div class="field mt-2">Completion Year:<input type="text" id="gy3" class="form-control e7" placeholder="Graduation Month/Year" required></div>
+                <hr>
+            </div>
+            
+            <!------------------------------------------------------------------------------------------->
+            <div class="tab-contents" id="experience">
+                <p>JOBS/INTERNSHIPS</p>
+                <p id="bld">Job/Internship 1</p>
+                <div class="field mt-2">Company Name:<input type="text" id="cn" class="form-control" placeholder="Company Name" required></div>
+                <div class="field mt-2">Location:<input type="text" id="loc" class="form-control" placeholder="Location" required></div>
+                <div class="field mt-2">Job Title:<input type="text" id="jt" class="form-control" placeholder="Job Title" required></div>
+                <div class="field mt-2">Description:<input type="text" id="desc" class="form-control" placeholder="Description" required></div>
+                <div class="field mt-2">Start Date:<input type="text" id="st" class="form-control" placeholder="Start Date" required></div>
+                <div class="field mt-2">End Date:<input type="text" id="ed" class="form-control" placeholder="End Date" required></div>
+                <hr>
+                <p id="bld">Job/Internship 2</p>
+                <div class="field mt-2">Company Name:<input type="text" id="cn1" class="form-control" placeholder="Company Name" required></div>
+                <div class="field mt-2">Location:<input type="text" id="loc1" class="form-control" placeholder="Location" required></div>
+                <div class="field mt-2">Job Title:<input type="text" id="jt1" class="form-control" placeholder="Job Title" required></div>
+                <div class="field mt-2">Description:<input type="text" id="desc1" class="form-control" placeholder="Description" required></div>
+                <div class="field mt-2">Start Date:<input type="text" id="st1" class="form-control" placeholder="Start Date" required></div>
+                <div class="field mt-2">End Date:<input type="text" id="ed1" class="form-control" placeholder="End Date" required></div>
+                <hr>
+                <p id="bld">Job/Internship 3</p>
+                <div class="field mt-2">Company Name:<input type="text" id="cn2" class="form-control" placeholder="Company Name" required></div>
+                <div class="field mt-2">Location:<input type="text" id="loc2" class="form-control" placeholder="Location" required></div>
+                <div class="field mt-2">Job Title:<input type="text" id="jt2" class="form-control" placeholder="Job Title" required></div>
+                <div class="field mt-2">Description:<input type="text" id="desc2" class="form-control" placeholder="Description" required></div>
+                <div class="field mt-2">Start Date:<input type="text" id="st2" class="form-control" placeholder="Start Date" required></div>
+                <div class="field mt-2">End Date:<input type="text" id="ed2" class="form-control" placeholder="End Date" required></div>
+                <hr>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------->
+            <div class="tab-contents" id="skillsets">
+                <p>SKILLS</p>
+                <form id="skl_form">
+                <div class="form" id="form1">
+                    <div class="field mt-2" id="sk1">
+                        Programming Languages:<input type="text" id="pl" class="form-control" placeholder="Programming Languages" required>
+                    </div>    
+                    <div class="field mt-2" id="sk2">
+                        Libraries/Frameworks:<input type="text" id="lf" class="form-control" placeholder="Libraries/Frameworks" required>
+                    </div>
+                    <div class="field mt-2" id="sk3">
+                        Tools/Platforms:<input type="text" id="tp" class="form-control" placeholder="Tools/Platforms" required>
+                    </div>   
+                    <div class="field mt-2" id="sk4">
+                        Databases:<input type="text" id="dbs" class="form-control" placeholder="Databases" required>
+                    </div>
+                </div>
+                </form>
+            </div>
+            
+            <!------------------------------------------------------------------------------------------------------------------>
+            <div class="tab-contents" id="projects">
+                <p>OPEN SOURCE/PERSONAL PROJECTS</p>
+                <p id="bld">Project-1</p>
+                <div class="field mt-2">Project Name:<input type="text" id="pn" class="form-control" placeholder="Project Name" required></div>
+                <div class="field mt-2">Description:<input type="text" id="dp" class="form-control" placeholder="Description" required></div>
+                <div class="field mt-2">Technologies Used:<input type="tu" id="jtt" class="form-control" placeholder="Technologies Used" required></div>
+                <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                <hr>
+                <p id="bld">Project-2</p>
+                <div class="field mt-2">Project Name:<input type="text" id="pn1" class="form-control" placeholder="Project Name" required></div>
+                <div class="field mt-2">Description:<input type="text" id="dp1" class="form-control" placeholder="Description" required></div>
+                <div class="field mt-2">Technologies Used:<input type="tu" id="jtt1" class="form-control" placeholder="Technologies Used" required></div>
+                <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git1" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                <hr>
+                <p id="bld">Project-3</p>
+                <div class="field mt-2">Project Name:<input type="text" id="pn2" class="form-control" placeholder="Project Name" required></div>
+                <div class="field mt-2">Description:<input type="text" id="dp2" class="form-control" placeholder="Description" required></div>
+                <div class="field mt-2">Technologies Used:<input type="tu" id="jtt2" class="form-control" placeholder="Technologies Used" required></div>
+                <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git2" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                <hr>
+            </div>
+
+            <!------------------------------------------------------------------------------------------------------------------->
+            <div class="tab-contents" id="certifications">
+                <p>CERTIFICATIONS</p>
+                <p id="bld">Certificate-1</p>
+                <div class="field mt-2">Certification Name:<input type="text" id="pnn" class="form-control" placeholder="Certification Name" required></div>
+                <div class="field mt-2">Issued by:<input type="text" id="dpp" class="form-control" placeholder="Issued by" required></div>
+                <div class="field mt-2">Link:<input type="tu" id="jts" class="form-control" placeholder="Link" required></div>
+                <hr>
+                <p id="bld">Certificate-2</p>
+                <div class="field mt-2">Certification Name:<input type="text" id="pnn1" class="form-control" placeholder="Certification Name" required></div>
+                <div class="field mt-2">Issued by:<input type="text" id="dpp1" class="form-control" placeholder="Issued by" required></div>
+                <div class="field mt-2">Link:<input type="tu" id="jts1" class="form-control" placeholder="Link" required></div>
+                <hr>
+                <p id="bld">Certificate-3</p>
+                <div class="field mt-2">Certification Name:<input type="text" id="pnn2" class="form-control" placeholder="Certification Name" required></div>
+                <div class="field mt-2">Issued by:<input type="text" id="dpp2" class="form-control" placeholder="Issued by" required></div>
+                <div class="field mt-2">Link:<input type="tu" id="jts2" class="form-control" placeholder="Link" required></div>
+                <hr>
+            </div>
+            
+
+            <!-------------------------------------------------------------------------------------------------------------------------------->
+            <div class="tab-contents" id="additional">
+                <p>HONORS & AWARDS</p>
+                <p id="bld">Award-1</p>
+                <div class="field mt-2">Institution Name:<input type="text" id="pnp" class="form-control" placeholder="Institution Name" required></div>
+                <div class="field mt-2">Award Name:<input type="text" id="dpa" class="form-control" placeholder="Award name" required></div>
+                <div class="field mt-2">Year:<input type="text" id="jtp" class="form-control" placeholder="Year" required></div>
+                <hr>
+                <p id="bld">Award-2</p>
+                <div class="field mt-2">Institution Name:<input type="text" id="pnp1" class="form-control" placeholder="Institution Name" required></div>
+                <div class="field mt-2">Award Name:<input type="text" id="dpa1" class="form-control" placeholder="Award name" required></div>
+                <div class="field mt-2">Year:<input type="text" id="jtp1" class="form-control" placeholder="Year" required></div>
+                <hr>
+                <p id="bld">Award-3</p>
+                <div class="field mt-2">Institution Name:<input type="text" id="pnp2" class="form-control" placeholder="Institution Name" required></div>
+                <div class="field mt-2">Award Name:<input type="text" id="dpa2" class="form-control" placeholder="Award name" required></div>
+                <div class="field mt-2">Year:<input type="text" id="jtp2" class="form-control" placeholder="Year" required></div>
+                <hr>
+                <div class="container text-center mt-3">
+                    <button onclick="generatere()" class="btn btn-primary btn-lg">Generate Resume</button>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+<!-------------------------------------------------------------------------------------------------------------------------------->
+        <div class="container2 container-fluid" id="res-temp">
+            <div class="hdd2">
+                <br>
+                <h1 id="fname">ELIJAH</h1>
+                <h1 id="mname">de</h1>
+                <h1 id="lname">MICHAELSON</h1>
+                <h4 id="title">Full Stack Developer</h4>
+                <br>
+            </div>
+            <div class="hdd3 hle">
+            <div class="tle">
+                <i class="fa-solid fa-location-dot"></i> <p id="adr">Street-12,French Quarter, New Orleans</p>
+                <i class="fa-solid fa-square-phone"></i> <p id="mbn">(212) 256-1414</p>
+                <i class="fa-solid fa-envelope"></i> <p id="eml">elijah101@gmail.com</p>
+            </div>
+            <div class="tle">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> <p id="links">www.linkedin.com, www.facebook.com, www.instagram.com</p>
+            </div>
+            <div>
+                <div class="tle">
+                <hr>
+                <p class="cedu">Education</p>
+                <hr>
+                </div>
+                <div class="hle">
+                <div><b><u><p id="dgr3">Master of Technology</p></u></b>
+                <i><p id="brn3">Computer Science and Engineering</p></i>
+                <p id="sty3">2024</p> <p id="edy3">2026</p></div>
+                <div><p id="clg3">University of New Orleans</p>
+                <p id="lcn3">2000 Lakeshore Drive New Orleans, LA 70148</p></div>
+                <div><p id="scr3">9 CGPA</p></div>
+
+                <div><b><u><p id="dgr2">Bachelor of Technology</p></u></b>
+                <i><p id="brn2">Computer Science and Engineering</p></i>
+                <p id="sty2">2020</p> <p id="edy2">2024</p></div>
+                <div><p id="clg2">University of New Orleans</p>
+                <p id="lcn2">2000 Lakeshore Drive New Orleans, LA 70148</p></div>
+                <div><p id="scr2">9.7 CGPA</p></div>
+ 
+                <div><p id="dgru"><b><u>12th</u></b></p>
+                <p id="dgr1"><i>CBSE</i></p>
+                <p id="sty1">2019</p> <p id="edy1">2020</p></div>
+                <div><p id="clg1">Maples Academy</p>
+                <p id="lcn1">French Quarter, New Orleans</p></div>
+                <div><p id="scr1">98%</p></div>
+        
+
+                <div><b><u><p id="dgru1">10th</p></u></b>
+                <i><p id="dgr">CBSE</p></i>
+                <p id="sty">2017</p> <p id="edy">2018</p></div>
+                <div><p id="clg">Maples Academy</p>
+                <p id="lcn">French Quarter, New Orleans</p></div>
+                <div><p id="scr">96%</p></div>
+                
+                </div>
+            </div>    
+            <div>
+                <div class="tle">
+                    <hr>
+                    <p class="cedu">Skills</p>
+                    <hr>
+                    </div>
+                <div class="hle">
+                <div><b>Programming Languages- </b><p id="pro">C, C++, Java, Python, SQL, HTML, CSS, JS</b></p></div>
+                <div><b>Libraries/Frameworks- </b><p id="lib">React, Angular, Node Js</p></div>
+                <div><b>Tools/Platforms- </b><p id="tls">Django, React, Angular, Node Js</p></div>
+                <div><b>Databases- </b><p id="db">MongoDB, Oracle, MySQL</p></div>
+                
+                </div>
+            </div>
+            <div>
+                <div class="tle">
+                    <hr>
+                    <p class="cedu">Experience</p>
+                    <hr>
+                    </div>
+                <div class="hle">
+                <div><b><p id="exs">2020</p> <p id="exd">2024</p></b></div>
+                <div><i><p id="comp">Internshala Trainings</p> <p id="col">New Delhi</p></i></div>
+                <div><p id="jot">Full Stack Developer</p></div>
+                <div><p id="jod">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsum voluptates ea, voluptatum corporis iste quas consequatur consectetur soluta libero dolor repellat numquam nobis temporibus ipsam error eos, aliquid vel optio minima, est doloremque quia excepturi voluptate. Commodi cumque obcaecati eos id. Tempora voluptas expedita iusto molestias inventore, beatae quae.</p></div>
+                
+
+                <div><b><p id="exs1">2020</p> <p id="exd1">2024</p></b></div>
+                <div><i><p id="comp1">Udemy Trainings</p> <p id="col1">New Delhi</p></i></div>
+                <div><p id="jot1">Full Stack Developer</p></div>
+                <div><p id="jod1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsum voluptates ea, voluptatum corporis iste quas consequatur consectetur soluta libero dolor repellat numquam nobis temporibus ipsam error eos, aliquid vel optio minima, est doloremque quia excepturi voluptate. Commodi cumque obcaecati eos id. Tempora voluptas expedita iusto molestias inventore, beatae quae.</p></div>
+                
+
+                <div><b><p id="exs2"></p> <p id="exd2"></p></b></div>
+                <div><i><p id="comp2"></p> <p id="col2"></p></i></div>
+                <div><p id="jot2"></p></div>
+                <div><p id="jod2"></p></div>
+                
+                </div>
+            </div>
+            <div>
+                <div class="tle">
+                    <hr>
+                    <p class="cedu">Projects</p>
+                    <hr>
+                    </div>
+                <div class="hle">
+                <div><b><p id="pron">Library Management System</p></b></div>
+                <div><i><p id="tus">HTML,CSS,JS,Node JS,MongoDB</p></i></div>
+                <div><p id="prol">www.github.in</p></div>
+                <div><p id="prod">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa harum illo deleniti excepturi eius ut, eveniet consequuntur numquam. Illo, quis! Laborum perferendis natus nisi recusandae est molestias impedit a optio!</p></div>
+                
+
+                <div><b><p id="pron1">Resume Builder</p></b></div>
+                <div><i><p id="tus1">HTML,CSS,JS</p></i></div>
+                <div><p id="prol1">www.github.in</p></div>
+                <div><p id="prod1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa harum illo deleniti excepturi eius ut, eveniet consequuntur numquam. Illo, quis! Laborum perferendis natus nisi recusandae est molestias impedit a optio!</p></div>
+                
+
+                <div><b><p id="pron2"></p></b></div>
+                <div><i><p id="tus2"></p></i></div>
+                <div><p id="prol2"></p></div>
+                <div><p id="prod2"></p></div>
+                
+                </div>
+            </div>
+            <div>
+                <div class="tle">
+                    <hr>
+                    <p class="cedu">Certifications</p>
+                    <hr>
+                    </div>
+                <div class="hle">
+                <div><b><p id="certn">Google Kickstart</p></b></div>
+                <div><i><p id="certc">Google</p></i></div>
+                <div><p id="certl">www.competionsgoogle.com</p></div>
+                
+
+                <div><b><p id="certn1">Codevita</p></b></div>
+                <div><i><p id="certc1">TCS</p></i></div>
+                <div><p id="certl1">www.tcs.com</p></div>
+                
+
+                <div><b><p id="certn2"></p></b></div>
+                <div><i><p id="certc2"></p></i></div>
+                <div><p id="certl2"></p></div>
+                
+                </div>
+            </div>
+            <div>
+                <div class="tle">
+                    <hr>
+                    <p class="cedu">Honors & Awards</p>
+                    <hr>
+                    </div>
+                <div class="hle">
+                <div><b><p id="ayr">2022</p></b></div>
+                <div><i><p id="an">Smart Indian Hackathon</p></i></div>
+                <div><p id="insn">Ministry of Education</p></div>
+                
+                <div><b><p id="ayr1">2023</p></b></div>
+                <div><i><p id="an1">Anveshna</p></i></div>
+                <div><p id="insn1">Ministry of Education</p></div>
+            
+                <div><b><p id="ayr2"></p></b></div>
+                <div><i><p id="an2"></p></i></div>
+                <div><p id="insn2"></p></div>
+                <br>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <button class="btn btn-primary btn-lg" id="download">Download Resume</button>
+        </div>
+    </div>
+</body>
+</html>

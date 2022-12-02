@@ -1,0 +1,313 @@
+.myimg{
+    border-radius: 50%;
+    width: 250px;
+}
+.bg{
+    background-color: aquamarine;
+}
+.front{
+    margin-top: 12px;
+    margin-left: 12px;
+}
+.intro{
+    font-size: 50px;
+    margin-top: 100px;
+    color: purple;
+    font-family:"Merienda One";
+}
+.intro1{
+    font-size: 23px;
+    font-family:"Merienda One";
+}
+.mainbtn{
+    font-size: 25px;
+    margin-top: 10px;
+    font-family:"Merienda One";
+    transition: transform .4s;
+    border-radius: 500px;
+}
+.mainbtn:hover{
+    -ms-transform: scale(0.9); 
+    -webkit-transform: scale(0.9); 
+    transform: scale(1.1);
+}
+
+.frontimg{
+    transition: transform .4s;
+}
+.frontimg:hover{
+    -ms-transform: scale(0.9); 
+    -webkit-transform: scale(0.9); 
+    transform: scale(1.1);
+}
+
+
+/*---------------------------template----------------------------------------------*/
+.temp{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 5px;
+    color: purple;
+    font-family:"Merienda One";
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.work img{
+    width: 85%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 90%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),purple) ;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+
+
+/*---------------------------------FORM1------------------------------------*/
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    margin-right: 50px;
+    margin-left: 3.2px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+.tab-links::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    background: purple;
+    position: absolute;
+    bottom:-8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    margin-left: -100%;
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+
+}
+.tab-contents{
+    display: none;
+
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.field{
+    color: purple;
+    font-weight: bold;
+}
+.tab-contents p{
+    margin-top: -20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+#bld{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn-lg{
+    background-color: lightblue;
+    transition: transform .4s;
+    color: purple;
+    font-family:"Merienda One";
+    border-radius: 500px;
+}
+.btn-lg:hover{
+    -ms-transform: scale(0.9); 
+    -webkit-transform: scale(0.9); 
+    transform: scale(1.1);
+}
+
+/*-------------------------Temp1----------------------------*/
+
+#title{
+    text-align: center;
+}
+.hdd{
+    background-color: rgb(171, 220, 236);
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+#contact{
+    text-align: left;
+    margin-top: 12px;
+    
+}
+#mbn{
+    font-size: 15px;
+    text-align: left;
+    display: inline;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;      
+    
+}
+
+#eml{
+    font-size: 15px;
+    text-align: left;
+    display: inline;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+}
+#adr{
+    font-size: 15px;
+    text-align: left;
+    display: inline;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+}
+#links{
+    font-size: 15px;
+    text-align: left;
+    display: inline;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+}
+#educ{
+    text-align: left;
+}
+#expn{
+    margin-top: 12px;
+}
+#fname,#mname,#lname{
+    display: inline;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+}
+#dgr,#sty,#edy,#scr,#clg,#lcn,#dgr1,#sty1,#edy1,#scr1,#clg1,#lcn1,#brn2,#dgr2,#sty2,#edy2,#clg2,#scr2,#lcn2,#brn3,#dgr3,#sty3,#edy3,#clg3,#scr3,#lcn3,#pro,#lib,#tls,#db,#ayr,#an,#insn,#ayr1,#an1,#insn1,#ayr2,#an2,#insn2,#exs,#exd,#comp,#col,#jot,#jod,#exs1,#exd1,#comp1,#col1,#jot1,#jod1,#exs2,#exd2,#comp2,#col2,#jot2,#jod2,#dgru,#dgru1{
+    font-size: 15px;
+    text-align: left;
+    display: inline;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+}
+
+#pron,#tus,#prol,#prod,#pron1,#tus1,#prol1,#prod1,#pron2,#tus2,#prol2,#prod2,#certn,#certc,#certl,#certn1,#certc1,#certl1,#certn2,#certc2,#certl2{
+    font-size: 15px;
+    text-align: left;
+    display: inline;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+}
+.col-md-4{
+    background-color: rgb(210, 240, 250);
+    margin-left: 66px;
+}
+.col-md-7{
+    margin-left: -10px;
+}
+
+#res-temp{
+    display: none;
+}
+#download{
+    display: none;
+    margin-left: 500px;
+    margin-bottom: 10px;
+}
+
+.tle{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+.hrl{
+    display: flex;
+    flex-direction: row;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+.cedu{
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top:-15px;
+    margin-bottom: -15px;
+}
+.hle{
+    margin-top: 10px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+.hdd2{
+    background-color: rgb(252, 214, 144);
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+.hdd3{
+    background-color: rgb(253, 230, 188);
+}
+#pic{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
