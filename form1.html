@@ -21,9 +21,9 @@
         <hr style="height:4px; border-width:0; color:rgb(3, 3, 116); background-color:rgb(3, 3, 116);">
         <div class="container1">
             <div class="tab-titles">
-                <p class="tab-links active-link" >PERSONAL</p>
+                <p class="tab-links" >PERSONAL</p>
                 <p class="tab-links" onclick="opentab('education');">EDUCATION</p>
-                <p class="tab-links" onclick="opentab('experience');">EXPERIENCE</p>
+                <p class="tab-links active-link" onclick="opentab('experience');">EXPERIENCE</p>
                 <p class="tab-links" onclick="opentab('skillsets');">SKILLSETS</p>
                 <p class="tab-links" onclick="opentab('projects');">PROJECTS</p>
                 <p class="tab-links" onclick="opentab('certifications');">CERTIFICATIONS</p>
@@ -72,45 +72,123 @@
             <div class="tab-contents" id="education">
                 <p>COLLEGE/ACADEMIC DETAILS</p>
                 <p id="bld">10th Details </p>
-                <div class="field mt-2">Institute Name:<input type="text" id="in" class="form-control e1" placeholder="Maples Academy" required></div>
-                <div class="field mt-2">Location:<input type="text" id="lc" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
-                <div class="field mt-2">Board:<input type="text" id="pr" class="form-control e4" placeholder="CBSE" required></div>
-                <div class="field mt-2">Percentage Obtained:<input type="text" id="sc" class="form-control e5" placeholder="99.8%" required></div>
-                <div class="field mt-2">Start Year:<input type="text" id="sm" class="form-control e6" placeholder="2017" required></div>
-                <div class="field mt-2">Completion Year:<input type="text" id="gy" class="form-control e7" placeholder="2018" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Institute Name:<input type="text" id="in" class="form-control e1" placeholder="Maples Academy" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Location:<input type="text" id="lc" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Board:<input type="text" id="pr" class="form-control e4" placeholder="CBSE" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Percentage Obtained:<input type="text" id="sc" class="form-control e5" placeholder="99.8%" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Start Year:<input type="text" id="sm" class="form-control e6" placeholder="2017" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Completion Year:<input type="text" id="gy" class="form-control e7" placeholder="2018" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">12th/Diploma Details </p>
-                <div class="field mt-2">Institute Name:<input type="text" id="in1" class="form-control e1" placeholder="Maples Academy" required></div>
-                <div class="field mt-2">Location:<input type="text" id="lc1" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
-                <div class="field mt-2">Board:<input type="text" id="pr1" class="form-control e4" placeholder="CBSE" required></div>
-                <div class="field mt-2">Marks Obtained:<input type="text" id="sc1" class="form-control e5" placeholder="99.7%" required></div>
-                <div class="field mt-2">Start Year:<input type="text" id="sm1" class="form-control e6" placeholder="2019" required></div>
-                <div class="field mt-2">Completion Year:<input type="text" id="gy1" class="form-control e7" placeholder="2020" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Institute Name:<input type="text" id="in1" class="form-control e1" placeholder="Maples Academy" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Location:<input type="text" id="lc1" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Board:<input type="text" id="pr1" class="form-control e4" placeholder="CBSE" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Percentage Obtained:<input type="text" id="sc1" class="form-control e5" placeholder="99.7%" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Start Year:<input type="text" id="sm1" class="form-control e6" placeholder="2019" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Completion Year:<input type="text" id="gy1" class="form-control e7" placeholder="2020" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Graduation Details </p>
-                <div class="field mt-2">Institute Name:<input type="text" id="in2" class="form-control e1" placeholder="University of Holy Cross" required></div>
-                <div class="field mt-2">Location:<input type="text" id="lc2" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
-                <div class="field mt-2">Course:<input type="text" id="pr2" class="form-control e4" placeholder="B.Tech." required></div>
-                <div class="field mt-2">Branch:<input type="text" id="br2" class="form-control e4" placeholder="Computer Science and Engineering" required></div>
-                <div class="field mt-2">Marks Obtained:<input type="text" id="sc2" class="form-control e5" placeholder="9.8 CGPA" required></div>
-                <div class="field mt-2">Start Year:<input type="text" id="sm2" class="form-control e6" placeholder="2020" required></div>
-                <div class="field mt-2">Completion Year:<input type="text" id="gy2" class="form-control e7" placeholder="2024" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Institute Name:<input type="text" id="in2" class="form-control e1" placeholder="University of Holy Cross" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Location:<input type="text" id="lc2" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Course:<input type="text" id="pr2" class="form-control e4" placeholder="B.Tech." required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Branch:<input type="text" id="br2" class="form-control e4" placeholder="Computer Science and Engineering" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Percentage Obtained:<input type="text" id="sc2" class="form-control e5" placeholder="98.7%" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Start Year:<input type="text" id="sm2" class="form-control e6" placeholder="2020" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Completion Year:<input type="text" id="gy2" class="form-control e7" placeholder="2024" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Post-Graduation Details </p>
-                <div class="field mt-2">Institute Name:<input type="text" id="in3" class="form-control e1" placeholder="University of Holy Cros" required></div>
-                <div class="field mt-2">Location:<input type="text" id="lc3" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
-                <div class="field mt-2">Course:<input type="text" id="pr3" class="form-control e4" placeholder="M.Tech." required></div>
-                <div class="field mt-2">Branch:<input type="text" id="br3" class="form-control e4" placeholder="Computer science and Engineering" required></div>
-                <div class="field mt-2">Marks Obtained:<input type="text" id="sc3" class="form-control e5" placeholder="9.9 CGPA" required></div>
-                <div class="field mt-2">Start Year:<input type="text" id="sm3" class="form-control e6" placeholder="2024" required></div>
-                <div class="field mt-2">Completion Year:<input type="text" id="gy3" class="form-control e7" placeholder="2026" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Institute Name:<input type="text" id="in3" class="form-control e1" placeholder="University of Holy Cros" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Location:<input type="text" id="lc3" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Course:<input type="text" id="pr3" class="form-control e4" placeholder="M.Tech." required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Branch:<input type="text" id="br3" class="form-control e4" placeholder="Computer science and Engineering" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Percentage Obtained:<input type="text" id="sc3" class="form-control e5" placeholder="99.9%" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Start Year:<input type="text" id="sm3" class="form-control e6" placeholder="2024" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Completion Year:<input type="text" id="gy3" class="form-control e7" placeholder="2026" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <div style="display: flex;">
                     <div class="container mt-3 text-start">
                         <button class="btn btn-primary btn-lg" onclick="opentab('personal')">Prev</button>
                     </div>
                     <div class="container mt-3 text-end">
-                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                        <button class="btn btn-primary btn-lg" onclick="evalidate();">Next</button>
                     </div>
                 </div>
             </div>
@@ -119,35 +197,89 @@
             <div class="tab-contents" id="experience">
                 <p>JOBS/INTERNSHIPS</p>
                 <p id="bld">Job/Internship 1</p>
-                <div class="field mt-2">Company Name:<input type="text" id="cn" class="form-control" placeholder="Company Name" required></div>
-                <div class="field mt-2">Location:<input type="text" id="loc" class="form-control" placeholder="Location" required></div>
-                <div class="field mt-2">Job Title:<input type="text" id="jt" class="form-control" placeholder="Job Title" required></div>
-                <div class="field mt-2">Description:<input type="text" id="desc" class="form-control" placeholder="Description" required></div>
-                <div class="field mt-2">Start Date:<input type="text" id="st" class="form-control" placeholder="Start Date" required></div>
-                <div class="field mt-2">End Date:<input type="text" id="ed" class="form-control" placeholder="End Date" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Company Name:<input type="text" id="cn" class="form-control" placeholder="Company Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Location:<input type="text" id="loc" class="form-control" placeholder="Location" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Job Title:<input type="text" id="jt" class="form-control" placeholder="Job Title" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Description:<input type="text" id="desc" class="form-control" placeholder="Description" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Start Date:<input type="text" id="st" class="form-control" placeholder="Start Date" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">End Date:<input type="text" id="ed" class="form-control" placeholder="End Date" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Job/Internship 2</p>
-                <div class="field mt-2">Company Name:<input type="text" id="cn1" class="form-control" placeholder="Company Name" required></div>
-                <div class="field mt-2">Location:<input type="text" id="loc1" class="form-control" placeholder="Location" required></div>
-                <div class="field mt-2">Job Title:<input type="text" id="jt1" class="form-control" placeholder="Job Title" required></div>
-                <div class="field mt-2">Description:<input type="text" id="desc1" class="form-control" placeholder="Description" required></div>
-                <div class="field mt-2">Start Date:<input type="text" id="st1" class="form-control" placeholder="Start Date" required></div>
-                <div class="field mt-2">End Date:<input type="text" id="ed1" class="form-control" placeholder="End Date" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Company Name:<input type="text" id="cn1" class="form-control" placeholder="Company Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Location:<input type="text" id="loc1" class="form-control" placeholder="Location" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Job Title:<input type="text" id="jt1" class="form-control" placeholder="Job Title" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Description:<input type="text" id="desc1" class="form-control" placeholder="Description" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Start Date:<input type="text" id="st1" class="form-control" placeholder="Start Date" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">End Date:<input type="text" id="ed1" class="form-control" placeholder="End Date" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Job/Internship 3</p>
-                <div class="field mt-2">Company Name:<input type="text" id="cn2" class="form-control" placeholder="Company Name" required></div>
-                <div class="field mt-2">Location:<input type="text" id="loc2" class="form-control" placeholder="Location" required></div>
-                <div class="field mt-2">Job Title:<input type="text" id="jt2" class="form-control" placeholder="Job Title" required></div>
-                <div class="field mt-2">Description:<input type="text" id="desc2" class="form-control" placeholder="Description" required></div>
-                <div class="field mt-2">Start Date:<input type="text" id="st2" class="form-control" placeholder="Start Date" required></div>
-                <div class="field mt-2">End Date:<input type="text" id="ed2" class="form-control" placeholder="End Date" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Company Name:<input type="text" id="cn2" class="form-control" placeholder="Company Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Location:<input type="text" id="loc2" class="form-control" placeholder="Location" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Job Title:<input type="text" id="jt2" class="form-control" placeholder="Job Title" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Description:<input type="text" id="desc2" class="form-control" placeholder="Description" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Start Date:<input type="text" id="st2" class="form-control" placeholder="Start Date" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">End Date:<input type="text" id="ed2" class="form-control" placeholder="End Date" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <div style="display: flex;">
                     <div class="container mt-3 text-start">
                         <button class="btn btn-primary btn-lg" onclick="opentab('education')">Prev</button>
                     </div>
                     <div class="container mt-3 text-end">
-                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                        <button class="btn btn-primary btn-lg" onclick="exvalidate();">Next</button>
                     </div>
                 </div>
             </div>
@@ -156,26 +288,32 @@
             <div class="tab-contents" id="skillsets">
                 <p>SKILLS</p>
                 <div class="form" id="form1">
-                    <div class="field mt-2" id="sk1">
-                        Programming Languages:<input type="text" id="pl" class="form-control" placeholder="Programming Languages" required>
-                    </div>    
-                    <div class="field mt-2" id="sk2">
-                        Libraries/Frameworks:<input type="text" id="lf" class="form-control" placeholder="Libraries/Frameworks" required>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Programming Languages:<input type="text" id="pl" class="form-control" placeholder="Programming Languages" required></div>    
+                        <div class="error"></div>
                     </div>
-                    <div class="field mt-2" id="sk3">
-                        Tools/Platforms:<input type="text" id="tp" class="form-control" placeholder="Tools/Platforms" required>
-                    </div>   
-                    <div class="field mt-2" id="sk4">
-                        Databases:<input type="text" id="dbs" class="form-control" placeholder="Databases" required>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Libraries/Frameworks:<input type="text" id="lf" class="form-control" placeholder="Libraries/Frameworks" required></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Tools/Platforms:<input type="text" id="tp" class="form-control" placeholder="Tools/Platforms" required></div>   
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Databases:<input type="text" id="dbs" class="form-control" placeholder="Databases" required></div>
+                        <div class="error"></div>
                     </div>
                 </div>
                 <hr>
                 <div style="display: flex;">
                     <div class="container mt-3 text-start">
                         <button class="btn btn-primary btn-lg" onclick="opentab('experience')">Prev</button>
+                        <div class="error"></div>
                     </div>
                     <div class="container mt-3 text-end">
                         <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                        <div class="error"></div>
                     </div>
                 </div>
             </div>
@@ -184,22 +322,58 @@
             <div class="tab-contents" id="projects">
                 <p>OPEN SOURCE/PERSONAL PROJECTS</p>
                 <p id="bld">Project-1</p>
-                <div class="field mt-2">Project Name:<input type="text" id="pn" class="form-control" placeholder="Resume Builder" required></div>
-                <div class="field mt-2">Description:<input type="text" id="dp" class="form-control" placeholder="It is used to build resumes." required></div>
-                <div class="field mt-2">Technologies Used:<input type="tu" id="jtt" class="form-control" placeholder="Technologies Used" required></div>
-                <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Project Name:<input type="text" id="pn" class="form-control" placeholder="Resume Builder" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Description:<input type="text" id="dp" class="form-control" placeholder="It is used to build resumes." required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Technologies Used:<input type="tu" id="jtt" class="form-control" placeholder="Technologies Used" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Project-2</p>
-                <div class="field mt-2">Project Name:<input type="text" id="pn1" class="form-control" placeholder="Project Name" required></div>
-                <div class="field mt-2">Description:<input type="text" id="dp1" class="form-control" placeholder="Description" required></div>
-                <div class="field mt-2">Technologies Used:<input type="tu" id="jtt1" class="form-control" placeholder="Technologies Used" required></div>
-                <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git1" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Project Name:<input type="text" id="pn1" class="form-control" placeholder="Project Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Description:<input type="text" id="dp1" class="form-control" placeholder="Description" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Technologies Used:<input type="tu" id="jtt1" class="form-control" placeholder="Technologies Used" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git1" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Project-3</p>
-                <div class="field mt-2">Project Name:<input type="text" id="pn2" class="form-control" placeholder="Project Name" required></div>
-                <div class="field mt-2">Description:<input type="text" id="dp2" class="form-control" placeholder="Description" required></div>
-                <div class="field mt-2">Technologies Used:<input type="tu" id="jtt2" class="form-control" placeholder="Technologies Used" required></div>
-                <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git2" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Project Name:<input type="text" id="pn2" class="form-control" placeholder="Project Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Description:<input type="text" id="dp2" class="form-control" placeholder="Description" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Technologies Used:<input type="tu" id="jtt2" class="form-control" placeholder="Technologies Used" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git2" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <div style="display: flex;">
                     <div class="container mt-3 text-start">
@@ -215,19 +389,46 @@
             <div class="tab-contents" id="certifications">
                 <p>CERTIFICATIONS</p>
                 <p id="bld">Certificate-1</p>
-                <div class="field mt-2">Certification Name:<input type="text" id="pnn" class="form-control" placeholder="Certification Name" required></div>
-                <div class="field mt-2">Issued by:<input type="text" id="dpp" class="form-control" placeholder="Issued by" required></div>
-                <div class="field mt-2">Link:<input type="tu" id="jts" class="form-control" placeholder="Link" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Certification Name:<input type="text" id="pnn" class="form-control" placeholder="Certification Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Issued by:<input type="text" id="dpp" class="form-control" placeholder="Issued by" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Link:<input type="tu" id="jts" class="form-control" placeholder="Link" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Certificate-2</p>
-                <div class="field mt-2">Certification Name:<input type="text" id="pnn1" class="form-control" placeholder="Certification Name" required></div>
-                <div class="field mt-2">Issued by:<input type="text" id="dpp1" class="form-control" placeholder="Issued by" required></div>
-                <div class="field mt-2">Link:<input type="tu" id="jts1" class="form-control" placeholder="Link" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Certification Name:<input type="text" id="pnn1" class="form-control" placeholder="Certification Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Issued by:<input type="text" id="dpp1" class="form-control" placeholder="Issued by" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Link:<input type="tu" id="jts1" class="form-control" placeholder="Link" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Certificate-3</p>
-                <div class="field mt-2">Certification Name:<input type="text" id="pnn2" class="form-control" placeholder="Certification Name" required></div>
-                <div class="field mt-2">Issued by:<input type="text" id="dpp2" class="form-control" placeholder="Issued by" required></div>
-                <div class="field mt-2">Link:<input type="tu" id="jts2" class="form-control" placeholder="Link" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Certification Name:<input type="text" id="pnn2" class="form-control" placeholder="Certification Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Issued by:<input type="text" id="dpp2" class="form-control" placeholder="Issued by" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Link:<input type="tu" id="jts2" class="form-control" placeholder="Link" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <div style="display: flex;">
                     <div class="container mt-3 text-start">
@@ -244,19 +445,46 @@
             <div class="tab-contents" id="additional">
                 <p>HONORS & AWARDS</p>
                 <p id="bld">Award-1</p>
-                <div class="field mt-2">Institution Name:<input type="text" id="pnp" class="form-control" placeholder="Institution Name" required></div>
-                <div class="field mt-2">Award Name:<input type="text" id="dpa" class="form-control" placeholder="Award name" required></div>
-                <div class="field mt-2">Year:<input type="text" id="jtp" class="form-control" placeholder="Year" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Institution Name:<input type="text" id="pnp" class="form-control" placeholder="Institution Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Award Name:<input type="text" id="dpa" class="form-control" placeholder="Award name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Year:<input type="text" id="jtp" class="form-control" placeholder="Year" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Award-2</p>
-                <div class="field mt-2">Institution Name:<input type="text" id="pnp1" class="form-control" placeholder="Institution Name" required></div>
-                <div class="field mt-2">Award Name:<input type="text" id="dpa1" class="form-control" placeholder="Award name" required></div>
-                <div class="field mt-2">Year:<input type="text" id="jtp1" class="form-control" placeholder="Year" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Institution Name:<input type="text" id="pnp1" class="form-control" placeholder="Institution Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Award Name:<input type="text" id="dpa1" class="form-control" placeholder="Award name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Year:<input type="text" id="jtp1" class="form-control" placeholder="Year" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <p id="bld">Award-3</p>
-                <div class="field mt-2">Institution Name:<input type="text" id="pnp2" class="form-control" placeholder="Institution Name" required></div>
-                <div class="field mt-2">Award Name:<input type="text" id="dpa2" class="form-control" placeholder="Award name" required></div>
-                <div class="field mt-2">Year:<input type="text" id="jtp2" class="form-control" placeholder="Year" required></div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Institution Name:<input type="text" id="pnp2" class="form-control" placeholder="Institution Name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Award Name:<input type="text" id="dpa2" class="form-control" placeholder="Award name" required></div>
+                    <div class="error"></div>
+                </div>
+                <div class="inputcontrol">
+                    <div class="field mt-2">Year:<input type="text" id="jtp2" class="form-control" placeholder="Year" required></div>
+                    <div class="error"></div>
+                </div>
                 <hr>
                 <div style="display: flex;">
                     <div class="container mt-3 text-start">
