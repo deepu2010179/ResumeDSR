@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/c288d1a9df.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda One">
     <script src="script.js"></script>
+    <script src="validation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 </head>
 <body>
@@ -20,24 +21,52 @@
         <hr style="height:4px; border-width:0; color:rgb(3, 3, 116); background-color:rgb(3, 3, 116);">
         <div class="container1">
             <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('personal')">PERSONAL</p>
-                <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
-                <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
-                <p class="tab-links" onclick="opentab('skillsets')">SKILLSETS</p>
-                <p class="tab-links" onclick="opentab('projects')">PROJECTS</p>
-                <p class="tab-links" onclick="opentab('certifications')">CERTIFICATIONS</p>
-                <p class="tab-links" onclick="opentab('additional')">ADDITIONAL</p>
+                <p class="tab-links active-link" >PERSONAL</p>
+                <p class="tab-links" onclick="opentab('education');">EDUCATION</p>
+                <p class="tab-links" onclick="opentab('experience');">EXPERIENCE</p>
+                <p class="tab-links" onclick="opentab('skillsets');">SKILLSETS</p>
+                <p class="tab-links" onclick="opentab('projects');">PROJECTS</p>
+                <p class="tab-links" onclick="opentab('certifications');">CERTIFICATIONS</p>
+                <p class="tab-links"onclick="opentab('additional');">ADDITIONAL</p>
             </div>  
             <div class="tab-contents active-tab" id="personal">
                 <p>PERSONAL INFO</p>
-                <div class="field mt-2">First Name:<input type="text" id="fn" class="form-control" placeholder="Elijah" required="true"></div>
-                <div class="field mt-2">Middle Name:<input type="text" id="mn" class="form-control" placeholder="de" required></div>
-                <div class="field mt-2">Last Name:<input type="text" id="ln" class="form-control" placeholder="Mikaelson" required></div>   
-                <div class="field mt-2">Title:<input type="text" id="tt" class="form-control" placeholder="Full Stack Web Developer" required></div>
-                <div class="field mt-2">Address:<input type="text" id="ad" class="form-control" placeholder="Street-12,French Quarter, New Orleans" required></div>
-                <div class="field mt-2">Mobile No.:<input type="tel" id="mo" class="form-control" placeholder="9789634521" required></div>
-                <div class="field mt-2">E-mail:<input type="email" id="em" class="form-control" placeholder="elijah365@gmail.com" required></div>
-                <div class="field mt-2">Links:<input id="lk1" type="text" placeholder="www.linkedin.com, www.facebook.com, www.instagram.com"  class="form-control" required></div> 
+                    <div class="inputcontrol">
+                        <div class="field mt-2">First Name:<input type="text" id="fn" class="form-control" placeholder="Elijah"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Middle Name:<input type="text" id="mn" class="form-control" placeholder="de"></div>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Last Name:<input type="text" id="ln" class="form-control" placeholder="Mikaelson"></div>   
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Title:<input type="text" id="tt" class="form-control" placeholder="Full Stack Web Developer"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Address:<input type="text" id="ad" class="form-control" placeholder="Street-12,French Quarter, New Orleans"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Mobile No.:<input type="tel" id="mo" class="form-control" placeholder="9789634521"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">E-mail:<input type="email" id="em" class="form-control" placeholder="elijah365@gmail.com"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <div class="field mt-2">Links:<input id="lk1" type="text" placeholder="www.linkedin.com, www.facebook.com, www.instagram.com"  class="form-control"></div> 
+                        <div class="error"></div>
+                    </div>
+                    <div class="container mt-3 text-end">
+                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                    </div>
                 <hr>
             </div>
             <div class="tab-contents" id="education">
@@ -46,7 +75,7 @@
                 <div class="field mt-2">Institute Name:<input type="text" id="in" class="form-control e1" placeholder="Maples Academy" required></div>
                 <div class="field mt-2">Location:<input type="text" id="lc" class="form-control e3" placeholder="Street-12,French Quarter, New Orleans" required></div>
                 <div class="field mt-2">Board:<input type="text" id="pr" class="form-control e4" placeholder="CBSE" required></div>
-                <div class="field mt-2">Marks Obtained:<input type="text" id="sc" class="form-control e5" placeholder="99.8%" required></div>
+                <div class="field mt-2">Percentage Obtained:<input type="text" id="sc" class="form-control e5" placeholder="99.8%" required></div>
                 <div class="field mt-2">Start Year:<input type="text" id="sm" class="form-control e6" placeholder="2017" required></div>
                 <div class="field mt-2">Completion Year:<input type="text" id="gy" class="form-control e7" placeholder="2018" required></div>
                 <hr>
@@ -76,6 +105,14 @@
                 <div class="field mt-2">Start Year:<input type="text" id="sm3" class="form-control e6" placeholder="2024" required></div>
                 <div class="field mt-2">Completion Year:<input type="text" id="gy3" class="form-control e7" placeholder="2026" required></div>
                 <hr>
+                <div style="display: flex;">
+                    <div class="container mt-3 text-start">
+                        <button class="btn btn-primary btn-lg" onclick="opentab('personal')">Prev</button>
+                    </div>
+                    <div class="container mt-3 text-end">
+                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                    </div>
+                </div>
             </div>
             
             <!------------------------------------------------------------------------------------------->
@@ -105,12 +142,19 @@
                 <div class="field mt-2">Start Date:<input type="text" id="st2" class="form-control" placeholder="Start Date" required></div>
                 <div class="field mt-2">End Date:<input type="text" id="ed2" class="form-control" placeholder="End Date" required></div>
                 <hr>
+                <div style="display: flex;">
+                    <div class="container mt-3 text-start">
+                        <button class="btn btn-primary btn-lg" onclick="opentab('education')">Prev</button>
+                    </div>
+                    <div class="container mt-3 text-end">
+                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                    </div>
+                </div>
             </div>
 
             <!--------------------------------------------------------------------------------------------->
             <div class="tab-contents" id="skillsets">
                 <p>SKILLS</p>
-                <form id="skl_form">
                 <div class="form" id="form1">
                     <div class="field mt-2" id="sk1">
                         Programming Languages:<input type="text" id="pl" class="form-control" placeholder="Programming Languages" required>
@@ -125,7 +169,15 @@
                         Databases:<input type="text" id="dbs" class="form-control" placeholder="Databases" required>
                     </div>
                 </div>
-                </form>
+                <hr>
+                <div style="display: flex;">
+                    <div class="container mt-3 text-start">
+                        <button class="btn btn-primary btn-lg" onclick="opentab('experience')">Prev</button>
+                    </div>
+                    <div class="container mt-3 text-end">
+                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                    </div>
+                </div>
             </div>
             
             <!------------------------------------------------------------------------------------------------------------------>
@@ -149,6 +201,14 @@
                 <div class="field mt-2">Technologies Used:<input type="tu" id="jtt2" class="form-control" placeholder="Technologies Used" required></div>
                 <div class="field mt-2">Project Link / GitHub Repository:<input type="text" id="git2" class="form-control" placeholder="Project Link / GitHub Repository" required></div>
                 <hr>
+                <div style="display: flex;">
+                    <div class="container mt-3 text-start">
+                        <button class="btn btn-primary btn-lg" onclick="opentab('skillsets')">Prev</button>
+                    </div>
+                    <div class="container mt-3 text-end">
+                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                    </div>
+                </div>
             </div>
 
             <!------------------------------------------------------------------------------------------------------------------->
@@ -169,6 +229,14 @@
                 <div class="field mt-2">Issued by:<input type="text" id="dpp2" class="form-control" placeholder="Issued by" required></div>
                 <div class="field mt-2">Link:<input type="tu" id="jts2" class="form-control" placeholder="Link" required></div>
                 <hr>
+                <div style="display: flex;">
+                    <div class="container mt-3 text-start">
+                        <button class="btn btn-primary btn-lg" onclick="opentab('projects')">Prev</button>
+                    </div>
+                    <div class="container mt-3 text-end">
+                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                    </div>
+                </div>
             </div>
             
 
@@ -190,9 +258,14 @@
                 <div class="field mt-2">Award Name:<input type="text" id="dpa2" class="form-control" placeholder="Award name" required></div>
                 <div class="field mt-2">Year:<input type="text" id="jtp2" class="form-control" placeholder="Year" required></div>
                 <hr>
-                <div class="container text-center mt-3">
-                    <button onclick="generatere()" class="btn btn-primary btn-lg">Generate Resume</button>
-                </div> 
+                <div style="display: flex;">
+                    <div class="container mt-3 text-start">
+                        <button class="btn btn-primary btn-lg" onclick="opentab('certifications')">Prev</button>
+                    </div>
+                    <div class="container text-end mt-3">
+                        <button onclick="generatere();valid();" class="btn btn-primary btn-lg">Generate Resume</button>
+                    </div> 
+                </div>
             </div>
         </div>
     </div>
