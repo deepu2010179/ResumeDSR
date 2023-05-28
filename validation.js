@@ -117,7 +117,110 @@ function valid(){
         c++;
     }
     if(c==8){
-        opentab('eductaion');
+        opentab('education');
+    }
+};
+function valid1(){
+    let fname = document.getElementById("fn");
+    let mname = document.getElementById("mn");
+    let lname = document.getElementById("ln");
+    let title = document.getElementById("tt");
+    let address = document.getElementById("ad");
+    let mobile = document.getElementById("mo");
+    let email = document.getElementById("em");
+    let link = document.getElementById("lk1");
+
+    let cc = 0;
+    let x = document.getElementById('picjip');
+    if(x.value == '' || x.value == null){
+    seterror(x,'*Image is required');
+    }else{
+    cc++;
+    setSuccess(x);
+    }
+
+    let c = 0;
+    let n = /^[A-Za-z]+$/;
+    let ad = /^[a-zA-Z0-9\s,'-]*$/;
+    let mb = /^\d{10}$/;
+    let em = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+    if(fname.value == ''|| fname.value == null){
+        seterror(fname,'*First Name is required');
+    }else if(!n.test(fname.value)){
+        seterror(fname,'*Enter alphabets only');
+    }
+    else{
+        setSuccess(fname);
+        c++;
+    }
+
+    if(mname.value == "" || mname.value == null || n.test(mname.value)){
+        setSuccess(mname);
+        c++;
+    }
+    else{
+        seterror(mname,'*Enter alphabets only');
+    }
+
+    if(lname.value == ''|| lname.value == null){
+        seterror(lname,'*Last Name is required');
+    }else if(!n.test(lname.value)){
+        seterror(lname,'*Enter alphabets only');
+    }
+    else{
+        setSuccess(lname);
+        c++;
+    }
+
+    if(title.value == ''|| title.value == null){
+        seterror(title,'*Title is required');
+    }else if(!n.test(title.value)){
+        seterror(title,'*Enter alphabets only');
+    }
+    else{
+        setSuccess(title);
+        c++;
+    }
+
+    if(address.value == ''|| address.value == null){
+        seterror(address,'*Address is required');
+    }else if(!ad.test(address.value)){
+        seterror(address,'*Enter valid Address');
+    }
+    else{
+        setSuccess(address);
+        c++;
+    }
+
+    if(mobile.value == ''|| mobile.value == null){
+        seterror(mobile,'*Mobile No. is required');
+    }else if(!mb.test(mobile.value)){
+        seterror(mobile,'*Enter valid Mobile No.');
+    }
+    else{
+        setSuccess(mobile);
+        c++;
+    }
+
+    if(email.value == ''|| email.value == null){
+        seterror(email,'*Email is required');
+    }else if(!em.test(email.value)){
+        seterror(email,'*Enter valid Email');
+    }
+    else{
+        setSuccess(email);
+        c++;
+    }
+
+    if(link.value == ''|| link.value == null){
+        seterror(link,'*Link is required');
+    }
+    else{
+        setSuccess(link);
+        c++;
+    }
+    if(c==8&&cc == 1){
+        opentab('education');
     }
 };
 function evalidate(){
@@ -577,3 +680,361 @@ function exvalidate(){
     }
 };
 
+function pvalidate(){
+    let pn = document.getElementById("pn");
+    let ds = document.getElementById("dp");
+    let tu = document.getElementById("jtt");
+    let lk = document.getElementById("git");
+
+    let pn1 = document.getElementById("pn1");
+    let ds1 = document.getElementById("dp1");
+    let tu1 = document.getElementById("jtt1");
+    let lk1 = document.getElementById("git1");
+
+    let pn2 = document.getElementById("pn2");
+    let ds2 = document.getElementById("dp2");
+    let tu2 = document.getElementById("jtt2");
+    let lk2 = document.getElementById("git2");
+
+    let dsc = /^[a-zA-Z0-9\s,'-./]*$/;
+    let t = /^[A-Z0-9\s+#]*$/;
+    let c3=0;
+
+    if(pn.value == ''|| pn.value == null){
+        seterror(pn,'*Project Name is required');
+    }else if(!dsc.test(pn.value)){
+        seterror(pn,'*Enter valid name');
+    }
+    else{
+        setSuccess(pn);
+        c3++;
+    }
+    if(ds.value == ''|| ds.value == null){
+        seterror(ds,'*Description is required');
+    }else if(!dsc.test(ds.value)){
+        seterror(ds,'*Enter valid description');
+    }
+    else{
+        setSuccess(ds);
+        c3++;
+    }
+    if(tu.value == ''|| tu.value == null){
+        seterror(tu,'*Technologies are required');
+    }else if(!t.test(tu.value)){
+        seterror(tu,'*Enter valid technologies');
+    }
+    else{
+        setSuccess(tu);
+        c3++;
+    }
+    if(lk.value == ''|| lk.value == null){
+        seterror(lk,'*Link is required');
+    }else if(!dsc.test(lk.value)){
+        seterror(lk,'*Enter valid Link');
+    }
+    else{
+        setSuccess(lk);
+        c3++;
+    }
+
+    if(pn1.value == ''|| pn1.value == null){
+        seterror(pn1,'*Project Name is required');
+    }else if(!dsc.test(pn1.value)){
+        seterror(pn1,'*Enter valid name');
+    }
+    else{
+        setSuccess(pn1);
+        c3++;
+    }
+    if(ds1.value == ''|| ds1.value == null){
+        seterror(ds1,'*Description is required');
+    }else if(!dsc.test(ds1.value)){
+        seterror(ds1,'*Enter valid description');
+    }
+    else{
+        setSuccess(ds1);
+        c3++;
+    }
+    if(tu1.value == ''|| tu1.value == null){
+        seterror(tu1,'*Technologies are required');
+    }else if(!t.test(tu1.value)){
+        seterror(tu1,'*Enter valid technologies');
+    }
+    else{
+        setSuccess(tu1);
+        c3++;
+    }
+    if(lk1.value == ''|| lk1.value == null){
+        seterror(lk1,'*Link is required');
+    }else if(!dsc.test(lk1.value)){
+        seterror(lk1,'*Enter valid Link');
+    }
+    else{
+        setSuccess(lk1);
+        c3++;
+    }
+
+
+    if(pn2.value == ''|| pn2.value == null || dsc.test(pn2.value)){
+        setSuccess(pn2);
+        c3++; 
+    }else{
+        seterror(pn2,'*Enter valid name');
+    }
+    
+    if(ds2.value == ''|| ds2.value == null || dsc.test(ds2.value)){
+        setSuccess(ds2);
+        c3++;
+    }else{
+        seterror(ds2,'*Enter valid description');
+    }
+    if(tu2.value == ''|| tu2.value == null || t.test(tu2.value)){
+        setSuccess(tu2);
+        c3++;
+    }else {
+        seterror(tu2,'*Enter valid technologies');
+    }
+   
+    if(lk2.value == ''|| lk2.value == null || dsc.test(lk2.value)){
+        setSuccess(lk2);
+        c3++;
+    }else {
+        seterror(lk2,'*Enter valid Link');
+    }
+    
+    if(c3==12){
+        opentab('certifications');
+    }
+};
+
+function skvalidate(){
+    let pl = document.getElementById("pl");
+    let lib = document.getElementById("lf");
+    let tls = document.getElementById("tp");
+    let db = document.getElementById("dbs");
+
+    let t = /^[A-Z0-9\s+#]*$/;
+    let lb = /^[A-Za-z]+$/;
+    let c4 = 0;
+
+    if(pl.value == ''|| pl.value == null){
+        seterror(pl,'*Language is required');
+    }else if(!t.test(pl.value)){
+        seterror(pl,'*Enter valid languages');
+    }
+    else{
+        setSuccess(pl);
+        c4++;
+    }
+    if(lib.value == ''|| lib.value == null){
+        seterror(lib,'*Library is required');
+    }else if(!lb.test(lib.value)){
+        seterror(lib,'*Enter valid libraries');
+    }
+    else{
+        setSuccess(lib);
+        c4++;
+    }
+    if(tls.value == ''|| tls.value == null){
+        seterror(tls,'*Tool is required');
+    }else if(!lb.test(tls.value)){
+        seterror(tls,'*Enter valid tools');
+    }
+    else{
+        setSuccess(tls);
+        c4++;
+    }
+    if(db.value == ''|| db.value == null){
+        seterror(db,'*Database is required');
+    }else if(!lb.test(db.value)){
+        seterror(db,'*Enter valid database');
+    }
+    else{
+        setSuccess(db);
+        c4++;
+    }
+    if(c4==4){
+        opentab('projects');
+    }
+};
+
+function crvalidate(){
+    let cn = document.getElementById("pnn");
+    let ib = document.getElementById("dpp");
+    let li = document.getElementById("jts");
+    
+    let cn1 = document.getElementById("pnn1");
+    let ib1 = document.getElementById("dpp1");
+    let li1 = document.getElementById("jts1");
+
+    let cn2 = document.getElementById("pnn2");
+    let ib2 = document.getElementById("dpp2");
+    let li2 = document.getElementById("jts2");
+    
+    let lb = /^[A-Za-z0-9\s.-]+$/;
+    let i = /^[A-Za-z]+$/;
+
+    let c5 = 0;
+
+    if(cn.value == ''|| cn.value == null){
+        seterror(cn,'*Name is required');
+    }else if(!lb.test(cn.value)){
+        seterror(cn,'*Enter valid name');
+    }
+    else{
+        setSuccess(cn);
+        c5++;
+    }
+    if(ib.value == ''|| ib.value == null){
+        seterror(ib,'*Issued by is required');
+    }else if(!i.test(ib.value)){
+        seterror(ib,'*Enter valid name');
+    }
+    else{
+        setSuccess(ib);
+        c5++;
+    }
+    if(li.value == ''|| li.value == null){
+        seterror(li,'*Link is required');
+    }
+    else{
+        setSuccess(li);
+        c5++;
+    }
+
+    if(cn1.value == '' || cn1.value == null){
+        seterror(cn1,'*Name is required');
+    }else if(!lb.test(cn1.value)){
+        seterror(cn1,'*Enter valid name');
+    }
+    else{
+        setSuccess(cn1);
+        c5++;
+    }
+    if(ib1.value == '' || ib1.value == null){
+        seterror(ib1,'*Issued by is required');
+    }else if(!i.test(ib1.value)){
+        seterror(ib1,'*Enter valid name');
+    }
+    else{
+        setSuccess(ib1);
+        c5++;
+    }
+    if(li1.value == ''|| li1.value == null){
+        seterror(li1,'*Link is required');
+    }
+    else{
+        setSuccess(li1);
+        c5++;
+    }
+    if(cn2.value == '' || cn2.value == null || lb.test(cn2.value)){
+        setSuccess(cn2);
+        c5++;
+    }
+    else{
+        seterror(cn2,'*Enter valid name');
+    }
+    if(ib2.value == '' || ib2.value == null || lb.test(ib2.value)){
+        setSuccess(ib2);
+        c5++;
+    }
+    else{
+        seterror(ib2,'*Enter valid name');
+    }
+    setSuccess(li2);
+    if(c5==8){
+        opentab('additional');
+    }
+};
+
+function advalidate(){
+    let inn = document.getElementById("pnp");
+    let an = document.getElementById("dpa");
+    let yr = document.getElementById("jtp");
+
+    let inn1 = document.getElementById("pnp1");
+    let an1 = document.getElementById("dpa1");
+    let yr1 = document.getElementById("jtp1");
+
+    let inn2 = document.getElementById("pnp2");
+    let an2 = document.getElementById("dpa2");
+    let yr2 = document.getElementById("jtp2");
+
+    let i = /^[A-Za-z]+$/;
+    let mb = /^\d{4}$/;
+
+    let c6 = 0;
+
+    if(inn.value == ''|| inn.value == null){
+        seterror(inn,'*Name is required');
+    }else if(!i.test(inn.value)){
+        seterror(inn,'*Enter valid name');
+    }
+    else{
+        setSuccess(inn);
+        c6++;
+    }
+    if(an.value == ''|| an.value == null){
+        seterror(an,'*Name is required');
+    }else if(!i.test(an.value)){
+        seterror(an,'*Enter valid name');
+    }
+    else{
+        setSuccess(an);
+        c6++;
+    }
+    if(yr.value == ''|| yr.value == null){
+        seterror(yr,'*Year is required');
+    }else if(!mb.test(yr.value)){
+        seterror(yr,'*Enter valid year');
+    }
+    else{
+        setSuccess(yr);
+        c6++;
+    }
+    if(inn1.value == ''|| inn1.value == null || i.test(inn1.value)){
+        setSuccess(inn1);
+        c6++;
+    }
+    else{
+        seterror(inn1,'*Enter valid name');
+    }
+    if(an1.value == ''|| an1.value == null || i.test(an1.value)){
+        setSuccess(an1);
+        c6++;
+    }
+    else{
+        seterror(an1,'*Enter valid name');
+    }
+    if(yr1.value == ''|| yr1.value == null || mb.test(yr1.value)){
+        setSuccess(yr1);
+        c6++;
+    }
+    else{
+        seterror(yr1,'*Enter valid year');
+    }
+    if(inn2.value == ''|| inn2.value == null || i.test(inn2.value)){
+        setSuccess(inn2);
+        c6++;
+    }
+    else{
+        seterror(inn2,'*Enter valid name');
+    }
+    if(an2.value == ''|| an2.value == null || i.test(an2.value)){
+        setSuccess(an2);
+        c6++;
+    }
+    else{
+        seterror(an2,'*Enter valid name');
+    }
+    if(yr2.value == ''|| yr2.value == null || mb.test(yr2.value)){
+        setSuccess(yr2);
+        c6++;
+    }
+    else{
+        seterror(yr2,'*Enter valid year');
+    }
+    if(c6==9){
+        generatere();
+    }
+};

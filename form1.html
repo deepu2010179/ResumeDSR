@@ -21,13 +21,13 @@
         <hr style="height:4px; border-width:0; color:rgb(3, 3, 116); background-color:rgb(3, 3, 116);">
         <div class="container1">
             <div class="tab-titles">
-                <p class="tab-links" >PERSONAL</p>
-                <p class="tab-links" onclick="opentab('education');">EDUCATION</p>
-                <p class="tab-links active-link" onclick="opentab('experience');">EXPERIENCE</p>
-                <p class="tab-links" onclick="opentab('skillsets');">SKILLSETS</p>
-                <p class="tab-links" onclick="opentab('projects');">PROJECTS</p>
-                <p class="tab-links" onclick="opentab('certifications');">CERTIFICATIONS</p>
-                <p class="tab-links"onclick="opentab('additional');">ADDITIONAL</p>
+                <p class="tab-links  active-link">PERSONAL</p>
+                <p class="tab-links">EDUCATION</p>
+                <p class="tab-links">EXPERIENCE</p>
+                <p class="tab-links">SKILLSETS</p>
+                <p class="tab-links">PROJECTS</p>
+                <p class="tab-links">CERTIFICATIONS</p>
+                <p class="tab-links">ADDITIONAL</p>
             </div>  
             <div class="tab-contents active-tab" id="personal">
                 <p>PERSONAL INFO</p>
@@ -312,7 +312,7 @@
                         <div class="error"></div>
                     </div>
                     <div class="container mt-3 text-end">
-                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                        <button class="btn btn-primary btn-lg" onclick="skvalidate();">Next</button>
                         <div class="error"></div>
                     </div>
                 </div>
@@ -380,7 +380,7 @@
                         <button class="btn btn-primary btn-lg" onclick="opentab('skillsets')">Prev</button>
                     </div>
                     <div class="container mt-3 text-end">
-                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                        <button class="btn btn-primary btn-lg" onclick="pvalidate();">Next</button>
                     </div>
                 </div>
             </div>
@@ -435,7 +435,7 @@
                         <button class="btn btn-primary btn-lg" onclick="opentab('projects')">Prev</button>
                     </div>
                     <div class="container mt-3 text-end">
-                        <button class="btn btn-primary btn-lg" onclick="valid();">Next</button>
+                        <button class="btn btn-primary btn-lg" onclick="crvalidate();">Next</button>
                     </div>
                 </div>
             </div>
@@ -491,7 +491,7 @@
                         <button class="btn btn-primary btn-lg" onclick="opentab('certifications')">Prev</button>
                     </div>
                     <div class="container text-end mt-3">
-                        <button onclick="generatere();valid();" class="btn btn-primary btn-lg">Generate Resume</button>
+                        <button onclick="advalidate();" class="btn btn-primary btn-lg">Generate Resume</button>
                     </div> 
                 </div>
             </div>
