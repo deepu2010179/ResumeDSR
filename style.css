@@ -323,3 +323,19 @@
 .inputcontrol.error input{
     border-color: red;
 }
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .gear {
+      animation: gear-spin infinite 20s linear;
+      margin-left: 20px;
+    }
+  }
+@keyframes gear-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
