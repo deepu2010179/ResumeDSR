@@ -37,7 +37,7 @@ function valid(){
     let link = document.getElementById("lk1");
 
     let c = 0;
-    let n = /^[A-Za-z]+$/;
+    let n = /^[A-Za-z ]*$/;
     let ad = /^[a-zA-Z0-9\s,'-]*$/;
     let mb = /^\d{10}$/;
     let em = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
@@ -140,7 +140,7 @@ function valid1(){
     }
 
     let c = 0;
-    let n = /^[A-Za-z]+$/;
+    let n = /^[A-Za-z ]*$/;
     let ad = /^[a-zA-Z0-9\s,'-]*$/;
     let mb = /^\d{10}$/;
     let em = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
@@ -256,7 +256,7 @@ function evalidate(){
 
     let ad = /^[a-zA-Z0-9\s,'-]*$/;
     let pr = /^(0*100{1,1}\.?((?<=\.)0*)?%?$)|(^0*\d{0,2}\.?((?<=\.)\d*)?%?)$/;
-    let n = /^[A-Za-z]+$/;
+    let n = /^[A-Za-z ]*$/;
     let n1 = /^[A-Za-z\s.]+$/;
     let mb = /^\d{4}$/;
     let c1=0;
@@ -514,7 +514,7 @@ function exvalidate(){
     let ed2 = document.getElementById("ed2");
 
     let c2=0;
-    let n = /^[A-Za-z]+$/;
+    let n = /^[A-Za-z ]*$/;
     let ad = /^[a-zA-Z0-9\s,'-]*$/;
     let d = /^(3[01]|[12][0-9]|0?[1-9])(\/|-)(1[0-2]|0?[1-9])\2([0-9]{2})?[0-9]{2}$/;
     let dsc = /^[a-zA-Z0-9\s,'-./]*$/;
@@ -696,7 +696,7 @@ function pvalidate(){
     let tu2 = document.getElementById("jtt2");
     let lk2 = document.getElementById("git2");
 
-    let dsc = /^[a-zA-Z0-9\s,'-./]*$/;
+    let dsc = /^[a-zA-Z0-9\s,'-./ ]*$/;
     let t = /^[A-Z0-9\s+#]*$/;
     let c3=0;
 
@@ -814,7 +814,7 @@ function skvalidate(){
     let db = document.getElementById("dbs");
 
     let t = /^[A-Z0-9\s+#]*$/;
-    let lb = /^[A-Za-z]+$/;
+    let lb = /^[A-Za-z ]*$/;
     let c4 = 0;
 
     if(pl.value == ''|| pl.value == null){
@@ -872,7 +872,7 @@ function crvalidate(){
     let li2 = document.getElementById("jts2");
     
     let lb = /^[A-Za-z0-9\s.-]+$/;
-    let i = /^[A-Za-z]+$/;
+    let i = /^[A-Za-z ]*$/;
 
     let c5 = 0;
 
@@ -960,7 +960,7 @@ function advalidate(){
     let an2 = document.getElementById("dpa2");
     let yr2 = document.getElementById("jtp2");
 
-    let i = /^[A-Za-z]+$/;
+    let i = /^[A-Za-z ]*$/;
     let mb = /^\d{4}$/;
 
     let c6 = 0;
